@@ -20,7 +20,7 @@ body {
   transition: 0.6s;
 }
 .single-product:hover {
-  box-shadow: 7px 7px 9px rgba(219, 155, 155, 0.794);
+  box-shadow: 5px 5px 7px rgba(219, 155, 155, 0.794);
   border-radius: 5px;
   border: 1px solid rgba(56, 14, 2, 0.863);
 }
