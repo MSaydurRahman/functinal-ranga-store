@@ -18,11 +18,11 @@ const showProducts = (products) => {
     <img class="product-image" src=${product.image}></img>
       </div>
       <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price}</h2>
+      <p class="text-danger">Category: ${product.category}</p>
+      <h2 class="text-secondary">Price: $ ${product.price}</h2>
        <h5 class="text-success">Total Rating:${product.rating.count}</h5>
-      <h5 class="text-primary"><span class="text-warning">
-      <span class="fa fa-star"></span></span>Rate:${product.rating.rate}</h5>
+      <h5 class="text-"><span class="text-warning">
+      <span class="fa fa-star"></span></span>Rating:${product.rating.rate}</h5>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary">add to cart</button>
       <button id="details-btn" class="btn btn-info" onclick="loadDetails(${product.id})">Details</button></div>
       `;
@@ -40,6 +40,7 @@ const loadDetails = (productId) => {
 loadDetails();
 const showDetail = (product) => {
   const showDetail = document.getElementById('show-detail');
+  showDetail.textContent = '';
   const div = document.createElement('div');
   div.classList.add('card');
   div.innerHTML = `
@@ -48,7 +49,7 @@ const showDetail = (product) => {
     <h3 >${product.title}</h3>
     <p >Category: ${product.category}</p>
     <h2 >Price: $ ${product.price}</h2>
-    <h5 class="text-primary">Rate:${product.rating.rate}</h5>
+    <h5 class="text-primary">Rating:${product.rating.rate}</h5>
     <h5 class="text-primary text-center">Total Rating:${product.rating.count}</h5>
     <button onclick="addToCart(${product.productid}),${product.price})" id="addToCart-btn" class="buy-now btn btn-primary mx-auto">add to cart</button>
     </div>
