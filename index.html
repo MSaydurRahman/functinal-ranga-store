@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naraz</title>
+  <title>Naraz E-Site</title>
   <link rel="stylesheet" href="./css/style.css" />
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-
+  <!-- fontawsome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,25 +20,33 @@
 </head>
 
 <body>
-  <header></header>
-  <main class="main">
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
+  <header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <div class="container-md">
+        <h1 class="navbar-brand text-success" href="#">Naraz E-Site</h1>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main container">
+    <div>
+      <div class="input-group mb-3 mx-auto w-50 mt-4 search-box">
+        <input id="input-field" type="text" class="form-control search-field" placeholder="Give a product name..."
+          aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-success" type="button" id="search-btn" onclick="loadProducts()">Search</button>
       </div>
     </div>
+    <!--  -->
+    <div id="show-detail" class=" mx-auto w-50 mb-4 " style="width: 18rem;">
+    </div>
+    <!--  -->
     <div class="row">
-      <div class="col-md-9 col-lg-9 col-sm-7">
+      <div class="col-md-9 col-lg-9 col-sm-7 p-4">
         <div id="all-products" class="">
-          <h1></h1>
         </div>
       </div>
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
-        <div class="cart" id="my-cart">
+        <div class="cart mt-4" id="my-cart">
           <table class="table">
             <thead>
               <h1>My-Cart</h1>
@@ -50,7 +60,7 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td>$ <span id="total-Products">0</span></td>
+                <td> <span id="total-Products">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
@@ -80,7 +90,7 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn btn-warning text-center">Buy Now</button>
           </div>
         </div>
       </div>
